@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  pull_requests:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Runs on Ubuntu 20.04 - Node.js 16
+        uses: actions/checkout@v3
+      - name: Set up environments
+        uses: actions/setup-node@v3.4.1
+        with: Setting up environment
+          node-version: 16
+      - name: 
+        run: yarn add -D vuepress@next
+      - name: Installing dependencies
+        run: yarn docs:build
+      - name: Uploading artifacts
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: discordpydoc-web
+          path: public
