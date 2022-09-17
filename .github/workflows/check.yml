@@ -7,15 +7,16 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     steps:
       - name: Runs on Ubuntu 20.04 - Node.js 16
         uses: actions/checkout@v3
-      - name: Set up environments
+      - name: Setting up environment
         uses: actions/setup-node@v3.4.1
-        with: Setting up environment
+        with:
           node-version: 16
       - name: Installing dependencies
         run: yarn add -D vuepress@next
       - name: Building
         run: yarn docs:build
+
