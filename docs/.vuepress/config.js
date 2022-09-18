@@ -30,10 +30,18 @@ export default defineUserConfig({
       ],
     }
     ],
+    navbar: [
+      {
+        text: 'Github',
+        link: 'https://github.com/Rapptz/discord.py',
+      }
+    ],
     docsRepo: 'https://github.com/cnlancehu/discordpydoc',
     docsBranch: 'master',
     docsDir: 'docs',
     editLinkPattern: ':repo/edit/:branch/:path',
-    editLinkText: '在Github编辑此页',
+    editLinkText: '在 Github 编辑此页',
+    contributorsText: '贡献者',
+    lastUpdatedText: '上次更新',
   })
 })
