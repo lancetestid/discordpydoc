@@ -344,7 +344,7 @@
     "vue" "^3.2.37"
     "vue-router" "^4.1.4"
 
-"@vuepress/plugin-back-to-top@2.0.0-beta.51":
+"@vuepress/plugin-back-to-top@^2.0.0-beta.51", "@vuepress/plugin-back-to-top@2.0.0-beta.51":
   "integrity" "sha512-VwTkJ9iV5vUFz93RURzk/4wnPPgq0OO4KUB4b9WCWlGg+4iD7Yo2zXnqaGe7Gh7hkQjbrysuPbZdtggbmnxMdg=="
   "resolved" "https://registry.npmjs.org/@vuepress/plugin-back-to-top/-/plugin-back-to-top-2.0.0-beta.51.tgz"
   "version" "2.0.0-beta.51"
@@ -440,6 +440,14 @@
     "chokidar" "^3.5.3"
     "vue" "^3.2.37"
     "vue-router" "^4.1.4"
+
+"@vuepress/plugin-shiki@^2.0.0-beta.51":
+  "integrity" "sha512-Q5sQn91GH7TOUYuSixuptiEDJyAbQhA+7ZEgJzPcQ8Z28X6/b/MoLCJQwJtegHHhqyjvQjFTGzWTJ1fC3adw9g=="
+  "resolved" "https://registry.npmjs.org/@vuepress/plugin-shiki/-/plugin-shiki-2.0.0-beta.51.tgz"
+  "version" "2.0.0-beta.51"
+  dependencies:
+    "@vuepress/core" "2.0.0-beta.51"
+    "shiki" "^0.10.1"
 
 "@vuepress/plugin-theme-data@2.0.0-beta.51":
   "integrity" "sha512-sfsZRhb7zZATqY1+BXkynZZ7HEZnBZEd4iuEyCNpWEnjwa7/qjPSKJyAb/M0a2SLgN2/UcPdM5URMfE1mV/4QQ=="
@@ -991,6 +999,11 @@
     "argparse" "^1.0.7"
     "esprima" "^4.0.0"
 
+"jsonc-parser@^3.0.0":
+  "integrity" "sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w=="
+  "resolved" "https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-3.2.0.tgz"
+  "version" "3.2.0"
+
 "jsonfile@^6.0.1":
   "integrity" "sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ=="
   "resolved" "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz"
@@ -1299,6 +1312,15 @@
   "resolved" "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz"
   "version" "3.0.0"
 
+"shiki@^0.10.1":
+  "integrity" "sha512-VsY7QJVzU51j5o1+DguUd+6vmCmZ5v/6gYu4vyYAhzjuNQU6P/vmSy4uQaOhvje031qQMiW0d2BwgMH52vqMng=="
+  "resolved" "https://registry.npmjs.org/shiki/-/shiki-0.10.1.tgz"
+  "version" "0.10.1"
+  dependencies:
+    "jsonc-parser" "^3.0.0"
+    "vscode-oniguruma" "^1.6.1"
+    "vscode-textmate" "5.2.0"
+
 "signal-exit@^3.0.2", "signal-exit@^3.0.7":
   "integrity" "sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ=="
   "resolved" "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz"
@@ -1409,6 +1431,16 @@
     "rollup" ">=2.75.6 <2.77.0 || ~2.77.0"
   optionalDependencies:
     "fsevents" "~2.3.2"
+
+"vscode-oniguruma@^1.6.1":
+  "integrity" "sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA=="
+  "resolved" "https://registry.npmjs.org/vscode-oniguruma/-/vscode-oniguruma-1.6.2.tgz"
+  "version" "1.6.2"
+
+"vscode-textmate@5.2.0":
+  "integrity" "sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ=="
+  "resolved" "https://registry.npmjs.org/vscode-textmate/-/vscode-textmate-5.2.0.tgz"
+  "version" "5.2.0"
 
 "vue-demi@*":
   "integrity" "sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A=="
