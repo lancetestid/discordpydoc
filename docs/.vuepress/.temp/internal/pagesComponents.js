@@ -7,8 +7,6 @@ export const pagesComponents = {
   "v-fb0f0066": defineAsyncComponent(() => import(/* webpackChunkName: "v-fb0f0066" */"D:/code/discordpydoc/docs/.vuepress/.temp/pages/guide/getting-started.html.vue")),
   // path: /guide/
   "v-fffb8e28": defineAsyncComponent(() => import(/* webpackChunkName: "v-fffb8e28" */"D:/code/discordpydoc/docs/.vuepress/.temp/pages/guide/index.html.vue")),
-  // path: /test/
-  "v-15554e84": defineAsyncComponent(() => import(/* webpackChunkName: "v-15554e84" */"D:/code/discordpydoc/docs/.vuepress/.temp/pages/test/index.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"D:/code/discordpydoc/docs/.vuepress/.temp/pages/404.html.vue")),
 }

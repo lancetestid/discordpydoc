@@ -38,13 +38,6 @@ export const searchIndex = [
   {
     "title": "",
     "headers": [],
-    "path": "/test/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
     "path": "/404.html",
     "pathLocale": "/",
     "extraFields": []

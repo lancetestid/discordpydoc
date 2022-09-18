@@ -7,7 +7,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'Discord.py',
   description: '一个便捷易用的Discord机器人框架',
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [['link', { rel: 'icon', href: '/static/images/logo.png' }]],
   plugins: [
     searchPlugin({
       locales: {
@@ -20,7 +20,7 @@ export default defineUserConfig({
     shikiPlugin,
   ],
   theme: defaultTheme({
-    logo: '/logo.png',
+    logo: '/static/images/logo.png',
     sidebar: [
       {
         text: '指南',
