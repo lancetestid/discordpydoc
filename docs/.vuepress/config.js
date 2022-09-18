@@ -5,8 +5,8 @@ import { shikiPlugin } from '@vuepress/plugin-shiki'
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  title: 'Discord.py文档',
-  description: '一个非官方的Discord.py文档',
+  title: 'Discord.py',
+  description: '一个便捷易用的Discord机器人框架',
   head: [['link', { rel: 'icon', href: '/logo.png' }]],
   plugins: [
     searchPlugin({

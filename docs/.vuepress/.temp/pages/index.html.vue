@@ -1,4 +1,3 @@
-<template><div><p>在弄了在弄了(</p>
-</div></template>
+<template><div></div></template>
 
 

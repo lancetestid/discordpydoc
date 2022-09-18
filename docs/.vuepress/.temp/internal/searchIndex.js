@@ -1,6 +1,6 @@
 export const searchIndex = [
   {
-    "title": "",
+    "title": "Discord.py文档",
     "headers": [],
     "path": "/",
     "pathLocale": "/",
@@ -14,6 +14,13 @@ export const searchIndex = [
         "title": "依赖环境",
         "slug": "依赖环境",
         "link": "#依赖环境",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装",
+        "slug": "安装",
+        "link": "#安装",
         "children": []
       }
     ],
