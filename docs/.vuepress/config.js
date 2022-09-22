@@ -1,6 +1,5 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
-import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
 
 export default defineUserConfig({
@@ -16,7 +15,6 @@ export default defineUserConfig({
         },
       },
     }),
-    backToTopPlugin,
     shikiPlugin,
   ],
   theme: defaultTheme({
