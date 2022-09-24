@@ -42,5 +42,6 @@ export default defineUserConfig({
     editLinkText: '在 Github 编辑此页',
     contributorsText: '贡献者',
     lastUpdatedText: '上次更新',
+    backToTopText: '返回顶部',
   })
 })
