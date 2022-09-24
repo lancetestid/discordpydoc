@@ -14,6 +14,7 @@ export default defineUserConfig({
           placeholder: '搜索',
         },
       },
+      isSearchable: (page) => page.path !== '/',
     }),
     shikiPlugin,
   ],

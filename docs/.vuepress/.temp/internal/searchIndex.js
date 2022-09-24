@@ -1,12 +1,5 @@
 export const searchIndex = [
   {
-    "title": "Discord.py文档",
-    "headers": [],
-    "path": "/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "快速上手",
     "headers": [
       {
