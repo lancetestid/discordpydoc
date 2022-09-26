@@ -1,5 +1,49 @@
 export const searchIndex = [
   {
+    "title": "贡献指南",
+    "headers": [
+      {
+        "level": 2,
+        "title": "文章准则",
+        "slug": "文章准则",
+        "link": "#文章准则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "编辑技巧",
+        "slug": "编辑技巧",
+        "link": "#编辑技巧",
+        "children": [
+          {
+            "level": 3,
+            "title": "FrontMatter",
+            "slug": "frontmatter",
+            "link": "#frontmatter",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "CodeGroup",
+            "slug": "codegroup",
+            "link": "#codegroup",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "自定义容器",
+            "slug": "自定义容器",
+            "link": "#自定义容器",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/contribute.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "快速上手",
     "headers": [
       {
@@ -36,16 +80,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

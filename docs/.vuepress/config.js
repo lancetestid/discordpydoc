@@ -1,6 +1,7 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { shikiPlugin } from '@vuepress/plugin-shiki'
+import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -17,6 +18,9 @@ export default defineUserConfig({
       isSearchable: (page) => page.path !== '/',
     }),
     shikiPlugin,
+    sitemapPlugin({
+      hostname: 'https://dspd.lancex.top',
+    })
   ],
   theme: defaultTheme({
     logo: '/static/images/logo.png',
