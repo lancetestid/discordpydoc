@@ -24,7 +24,7 @@ jobs:
           server: ${{ secrets.serverip }}
           port: ${{ secrets.serverport }}
           ssh_private_key: ${{ secrets.serversshkey }}
-          local_path: ./public/*
-          remote_path: /site/discordpydoc/*
+          local_path: './public/*'
+          remote_path: '/site/discordpydoc/'
           sftp_only: true
           delete_remote_files: true
