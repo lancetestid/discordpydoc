@@ -26,6 +26,6 @@ jobs:
           ssh_private_key: ${{ secrets.serversshkey }}
           local_path: './public/*'
           remote_path: '/site/discordpydoc'
-          sftp_only: true
+          sftp_only: false
           sftpArgs: '-o ConnectTimeout=5'
           delete_remote_files: true
