@@ -19,15 +19,15 @@ jobs:
         run: yarn docs:build
   Deploy:
     needs: Build
-      - name: Deploy
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          username: root
-          server: ${{ secrets.serverip }}
-          port: ${{ secrets.serverport }}
-          ssh_private_key: ${{ secrets.serversshkey }}
-          local_path: './public/*'
-          remote_path: '/site/discordpydoc'
-          sftp_only: false
-          sftpArgs: '-o ConnectTimeout=5'
-          delete_remote_files: true
+    - name: Deploy
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        username: root
+        server: ${{ secrets.serverip }}
+        port: ${{ secrets.serverport }}
+        ssh_private_key: ${{ secrets.serversshkey }}
+        local_path: './public/*'
+        remote_path: '/site/discordpydoc'
+        sftp_only: false
+        sftpArgs: '-o ConnectTimeout=5'
+        delete_remote_files: true
