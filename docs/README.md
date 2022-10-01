@@ -1,6 +1,6 @@
 ---
 home: true
-title: Discord.py文档
+title: 
 heroImage: /static/images/logo.png
 actions:
   - text: 快速上手
