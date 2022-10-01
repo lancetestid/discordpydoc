@@ -17,10 +17,6 @@ jobs:
         run: yarn add -D vuepress@next
       - name: Building
         run: yarn docs:build
-  Deploy:
-    needs: Build
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
