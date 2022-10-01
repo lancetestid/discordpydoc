@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest 
     steps:
       - name: Initializing
@@ -17,6 +17,8 @@ jobs:
         run: yarn add -D vuepress@next
       - name: Building
         run: yarn docs:build
+  Deploy:
+    needs: Build
       - name: Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
