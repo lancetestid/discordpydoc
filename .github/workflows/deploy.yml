@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Deploy:
+  Build:
     runs-on: ubuntu-latest 
     steps:
       - name: Initializing
@@ -17,6 +17,19 @@ jobs:
         run: yarn add -D vuepress@next
       - name: Building
         run: yarn docs:build
+      - name: Uploading build artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: DSPD-web
+          path: public
+  Deploy:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Downloading build artifact
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: DSPD-web
+          path: public
       - name: Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:

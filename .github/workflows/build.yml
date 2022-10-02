@@ -20,5 +20,5 @@ jobs:
       - name: Uploading artifacts
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: Build
+          name: DSPD-web
           path: public
