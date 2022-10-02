@@ -23,6 +23,7 @@ jobs:
           name: DSPD-web
           path: public
   Deploy:
+    needs: Build
     runs-on: ubuntu-latest 
     steps:
       - name: Downloading build artifact
