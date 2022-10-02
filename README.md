@@ -16,7 +16,7 @@ yarn add -D vuepress@next
 yarn docs:dev
 ```
 
-此命令会输出一个本地的网址，可进行文档的预览，修改本地文件后，
+此命令会输出一个本地的网址，可进行文档的预览，修改本地文件后，网站会同步更新
 ## 构建
 ```bash
 yarn docs:build
