@@ -4,117 +4,30 @@ title: 贡献指南
 sidebar: 贡献指南
 ---
 
-# 感谢您为我们的项目作出贡献
 
 ## 文章准则
-本项目使用Markdown作为文档文件，并使用VuePress进行网站开发
+本项目使用Markdown编写，并使用VuePress进行网站开发
 
-## 编辑技巧
+### 文档编写格式化
+这里为您整合了一些编写文档的主要格式化规则
+- [Markdown容器](https://v2.vuepress.vuejs.org/zh/reference/default-theme/markdown.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%B9%E5%99%A8)
+- [Frontmatter](https://v2.vuepress.vuejs.org/zh/reference/default-theme/frontmatter.html)
+- [Codegroup](https://v2.vuepress.vuejs.org/zh/reference/default-theme/components.html#codegroup)
 
-若您仅想快速编辑，下面为您总结了一些(来自VuePress文档)编写文档的技巧
+### 储存规范
+下文默认使用 `<sourceDir>` 作为源码根目录
 
-### FrontMatter
-FrontMatter是一种用于在Markdown文件中添加元数据的方式，它是一个YAML格式的块，位于文件的开头，用三个连字符`---`包裹
+#### 图片存储 
 
-例如
+请将文档中的图片储存在 `<sourceDir>/docs/.vuepress/public/static/public`中
 
+在文档中这样引用它 `/static/public/图片名称`
+
+例如在图片存储目录上传了一个名为 `eg.jpg` 的图片
 ```markdown
----
-lang: zh-CN
-title: 页面的标题
-description: 页面的描述
-sidebar: '侧边栏显示的名称'
----
+//若图片在源代码中的目录为
+<sourceDir>/docs/.vuepress/public/static/public/eg.jpg
+
+// 在文档中这样引用它
+![示例图片](/static/public/eg.jpg)
 ```
-它可以显示在侧边栏中的名称
-常用的好像就这个(大雾
-
-### CodeGroup
-
-例如
-
-```html
-<CodeGroup>
-  <CodeGroupItem title="选项1" active>
-
-    ```
-    选项1的内容
-    ```
-
-  </CodeGroupItem>
-  <CodeGroupItem title="选项2">
-
-    ```
-    选项2的内容
-    ```
-
-  </CodeGroupItem>
-</CodeGroup>
-```
-
-渲染为
-
-<CodeGroup>
-  <CodeGroupItem title="选项1" active>
-
-```
-选项1的内容
-```
-
-  </CodeGroupItem>
-
-  <CodeGroupItem title="选项2">
-
-```
-选项2的内容
-```
-
-  </CodeGroupItem>
-</CodeGroup>
-
-### 自定义容器
-使用
-
-```markdown
-::: <type> [title]
-[content]
-:::
-```
-
-例如
-
-```markdown
-::: tip
-这是一个提示
-:::
-::: warning 标题
-这是一个带标题的警告
-:::
-::: danger
-这是一个危险警告
-:::
-::: details
-这是一个 details 标签
-:::
-::: details 点击查看
-这是一个带标题的 details 标签
-:::
-```
-
-渲染为
-
-::: tip
-这是一个提示
-:::
-::: warning 标题
-这是一个带标题的警告
-:::
-::: danger
-这是一个危险警告
-:::
-::: details
-这是一个 details 标签
-:::
-::: details 标题
-这是一个带标题的 details 标签
-:::

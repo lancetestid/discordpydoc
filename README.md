@@ -3,7 +3,7 @@
 还在开发中...
 
 此网页使用VuePress构建，若需要为本项目作出贡献，请参阅[VuePress官方文档](https://v2.vuepress.vuejs.org/zh/guide/)
-贡献技巧及项目准则请点[这里](http://dspd.lancex.top/contribute.html)
+项目准则请点[这里](http://dspd.lancex.top/contribute.html)
 
 
 ## 安装
@@ -16,7 +16,7 @@ yarn add -D vuepress@next
 yarn docs:dev
 ```
 
-此命令会输出一个本地的网址，可进行文档的预览，修改本地文件后，网站会同步更新
+此命令会输出一个本地的网址，可进行文档的预览，修改本地文件并保存后，网站会同步更新
 ## 构建
 ```bash
 yarn docs:build
