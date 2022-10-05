@@ -6,7 +6,7 @@ on:
   push:
 
 jobs:
-  build:
+  Check:
     runs-on: ubuntu-latest 
     steps:
       - name: Initializing
@@ -19,4 +19,29 @@ jobs:
         run: yarn add -D vuepress@next
       - name: Building
         run: yarn docs:build
-
+      - name: Uploading artifacts
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: DSPD-web
+          path: public
+#  Preview:
+#    needs: Build
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Downloading build artifact
+#        uses: actions/download-artifact@v3.0.0
+#        with:
+#          name: DSPD-web
+#          path: public
+#      - name: Deploy
+#        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+#        with:
+#          username: root
+#          server: ${{ secrets.serverip }}
+#          port: ${{ secrets.serverport }}
+#          ssh_private_key: ${{ secrets.serversshkey }}
+#          local_path: './public/*'
+#          remote_path: '/site/discordpydoc'
+#          sftp_only: false
+#          sftpArgs: '-o ConnectTimeout=5'
+#          delete_remote_files: true
