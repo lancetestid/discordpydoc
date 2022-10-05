@@ -1,0 +1,66 @@
+name: PRPreview
+
+on:
+  pull_request:
+
+jobs:
+  Check:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Initializing
+        uses: actions/checkout@v3
+      - name: Setting up environment
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: 16
+      - name: Installing dependencies
+        run: yarn add -D vuepress@next
+      - name: Building
+        run: yarn docs:build
+      - name: Uploading artifacts
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: DSPD-web
+          path: public
+      - name: Comment to PR
+        uses: github-actions-up-and-running/pr-comment@v1.0.0
+        with:
+          repo-token: ${{ secrets.ghtoken }}
+          message: |
+            The code has built successfully, please wait for the preview link
+  Preview:
+    needs: Build
+    runs-on: ubuntu-latest
+    env:
+      PRID: $(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }') >> $GITHUB_ENV
+    steps:
+      - name: Downloading build artifact
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: DSPD-web
+          path: public
+      - name: Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: root
+          server: ${{ secrets.serverip }}
+          port: ${{ secrets.serverport }}
+          ssh_private_key: ${{ secrets.serversshkey }}
+          local_path: './public/*'
+          remote_path: '/site/prev/dspd/${{ env.PRID }}'
+          sftp_only: false
+          sftpArgs: '-o ConnectTimeout=5'
+          delete_remote_files: true
+      - name: Comment to PR
+        uses: github-actions-up-and-running/pr-comment@v1.0.0
+        with:
+          repo-token: ${{ secrets.ghtoken }}
+          message: |
+            ### Thanks for your contribution
+            If you can see this message, your check has already passed
+
+            Here is your Preview Link, please check if your expectations are met
+
+            If the answer is no, please close this PR immediatly
+
+            [Check Your Code](https://prev.lancex.top/dspd/${{ env.PRID }})
